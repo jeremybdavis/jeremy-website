@@ -19,6 +19,22 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+
+        $( ".navbar-toggle" ).toggle(
+          function() {
+            $(this).addClass('active');
+            $('.nav-primary').addClass( "active" );
+          }, function() {
+            $(this).removeClass('active');
+            $('.nav-primary').removeClass( "active");
+          }
+        );
+        $(window).resize(function() {
+          if ($(window).width() > 768 && $('.nav-primary').hasClass('active')) {
+            $('.nav-primary').removeClass( "active");
+            $('.navbar-toggle').click();
+          };
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

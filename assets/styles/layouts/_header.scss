@@ -1,0 +1,85 @@
+.navbar-header .brand {
+  color: $black;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.navbar-toggle {
+  background-color: $white;
+  border: 0;
+  float: right;
+  padding-top: 8px;
+
+  &:focus {
+    outline: 0;
+  }
+
+  .icon-bar {
+    background-color: $black;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: all .3s ease-in-out;
+    width: 25px;
+  }
+
+  .icon-bar:nth-of-type(2) { top: 0; }
+  .icon-bar:nth-of-type(3) { top: 0; }
+
+  .icon-bar+.icon-bar {
+    margin-top: 4px;
+  }
+
+  &.active .icon-bar:nth-of-type(1) {
+    top: 8px;
+    transform: rotate(225deg);
+  }
+
+  &.active .icon-bar:nth-of-type(2) {
+    background-color: transparent;
+    transform: rotate(330deg);
+  }
+
+  &.active .icon-bar:nth-of-type(3) {
+    top: -6px;
+    transform: rotate(-225deg);
+  }
+}
+
+.nav-primary {
+  display: none;
+  text-align: center;
+  width: 100%;
+
+  a {
+    color: $black;
+    text-transform: uppercase;
+  }
+
+  &.active {
+    display: block;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-header .brand {
+    font-size: 28px;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .nav-primary {
+    display: block;
+    float: right;
+    text-align: initial;
+    width: initial;
+
+    .menu-item {
+      float: left;
+      padding: 0 10px;
+    }
+  }
+}
