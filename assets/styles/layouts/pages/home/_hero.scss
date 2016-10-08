@@ -1,0 +1,45 @@
+.hero {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+  text-align: center;
+  z-index: 0;
+
+  &::after {
+    background-color: $black;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .hero-angle {
+    bottom: 0;
+    font-size: 60px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+.home-hero-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1;
+
+  h1 {
+    @include lato-light(64px);
+    color: $white;
+    text-transform: uppercase;
+  }
+}

@@ -102,6 +102,7 @@ function assets() {
   }
 
   wp_enqueue_style( 'lato', 'https://fonts.googleapis.com/css?family=Lato:300,400,700', false, null );
+  wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', false, null);
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

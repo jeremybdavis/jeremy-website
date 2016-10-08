@@ -33,7 +33,7 @@
           if ($(window).width() > 768 && $('.nav-primary').hasClass('active')) {
             $('.nav-primary').removeClass( "active");
             $('.navbar-toggle').click();
-          };
+          }
         });
       },
       finalize: function() {

@@ -1,0 +1,31 @@
+.home-container {
+  padding: 0;
+
+  .home-main {
+    img {
+      height: 220px;
+      object-fit: cover;
+      padding: 0;
+    }
+
+    .btn-primary {
+      background-color: transparent;
+      border-color: $black;
+      border-radius: 0;
+      color: $black;
+      margin-top: 50px;
+      padding: 12px 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  .home-copy {
+    float: right;
+    height: 250px;
+    padding: 45px;
+
+    h3 {
+      @include lato-light(24px);
+    }
+  }
+}

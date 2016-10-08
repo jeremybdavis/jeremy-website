@@ -6,6 +6,7 @@
 // endbower
 
 @import "common/global";
+@import 'common/mixins';
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";
@@ -17,3 +18,6 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+
+@import 'layouts/pages/home/hero';
+@import 'layouts/pages/home/home';
