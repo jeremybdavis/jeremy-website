@@ -6,6 +6,10 @@
       height: 220px;
       object-fit: cover;
       padding: 0;
+
+      @media (min-width: 768px) {
+        height: 338px;
+      }
     }
 
     .btn-primary {
@@ -19,6 +23,20 @@
     }
   }
 
+  .home-featured {
+    clear: both;
+
+    &:nth-of-type(even) {
+      img {
+        float: right;
+      }
+
+      .home-copy {
+        float: left;
+      }
+    }
+  }
+
   .home-copy {
     float: right;
     height: 250px;
@@ -26,6 +44,14 @@
 
     h3 {
       @include lato-light(24px);
+    }
+
+    @media (min-width: 768px) {
+      padding: 100px 60px;
+
+      &:nth-of-type(2n) {
+        float: left;
+      }
     }
   }
 
